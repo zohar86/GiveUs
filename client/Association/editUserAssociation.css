@@ -1,0 +1,205 @@
+/* Global styles */
+body::before {
+  content: "";
+  position: fixed; /* Change to fixed position to cover the entire viewport */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* Update to 100% to cover the entire page */
+  background-image: url("../Images/giveuslogo.jpg");
+  background-size: 100; /* Use 'cover' to scale and cover the entire background */
+  background-position: center top;
+  mix-blend-mode: multiply;
+  opacity: 0.6;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+body {
+  --primary-color: #00bfa5;
+  --secondary-color: #ff4081;
+  --accent-color: #fdd835;
+}
+button {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  color:#fff;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+}
+button:hover{
+  border-color: #fff;
+}
+h2 {
+  text-align: center;
+  color: #333;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* "Change" and "Back" buttons */
+.submitchange-btn{
+  background-color:  #4caf50;
+}
+.returnhomepage-btn {
+  background-color:#f44336;
+  transform: translateX(215px);
+}
+.form-edit-box {
+  transform: translateY(30px);
+  width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border: 2px solid #000;
+}
+
+/* Confirmation modal */
+.confirmodal {
+  display: none;
+  width: 450px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 550px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border: 2px solid #000;
+}
+
+.confirmodal p, .returnmodal p{
+  text-align: center;
+  transform: translateX(110px);
+  font-size: 16px;
+}
+.confirm-btn-yes{
+    background-color: #4caf50;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    transform: translateY(40px)translateX(20px);
+}
+.confirm-btn-no{
+  background-color: #f44336;
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  margin-left: 320px;
+  transform: translateY(0px)translateX(50px);
+}
+/* Return modal */
+.returnmodal {
+ display: none;
+  width: 550px;
+  height: 150px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border: 2px solid #000;
+}
+
+.returnmodal p{
+  text-align: center;
+  transform: translateX(135px);
+}
+.return-btn-yes{
+  background-color: #4caf50;
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  transform: translateY(30px)translateX(250px);
+}
+/* Form styles */
+.form-confirm-modal,
+.form-return-modal {
+  width: 50%;
+}
+
+.password-input,
+.repeat-password-input {
+  position: relative;
+  transform: translateY(0px);
+}
+.repeat-password-input{
+  transform: translateY(5px);
+}
+
+/* Media queries */
+@media screen and (max-width: 480px) {
+  .edituser,
+  .confirmodal,
+  .returnmodal {
+    max-width: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+.password-input .toggle-password {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  padding: 0px 0;
+  border: none;
+  outline: none;
+  font-size: 28px;
+  background: none; /* Remove the background color */
+  background-color: transparent;
+}
+
+.repeat-password-input .toggle-password {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.toggle-password{
+  cursor: pointer;
+  mix-blend-mode: multiply;
+}

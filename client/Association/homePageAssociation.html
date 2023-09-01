@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Association Home Page</title>
+    <link rel="stylesheet" href="homePageAssociation.css">
+</head>
+<body>
+    <div class="profileuser" id="profile_id">
+        <form action="" method="get" class="form-profile-box">
+            <h2>User Profile</h2>
+            <div class="profile-item">
+                <label for="name"><strong>Name:</strong></label>
+                <p><span id="user-name"></span></p>
+              </div>
+              <div class="profile-item">
+                <label for="email"><strong>Email:</strong></label>
+                <p><span id="user-email"></span></p>
+              </div>
+              <div class="profile-item">
+                <label for="phone"><strong>Phone:</strong></label>
+                <p><span id="user-phone"></span></p>
+              </div>
+              <div class="profile-item">
+                <label for="address"><strong>Address:</strong></label>
+                <p><span id="user-address"></span></p>
+              </div>
+              <div class="profile-item">
+                <label for="type"><strong>Type:</strong></label>
+                <p><span id="user-type"></span></p>
+              </div>
+              <button class="logout-btn" id="logout" type="submit">Logout</button>
+            </form>
+        </form>
+    </div>
+    <div class="userselectmenu" id="userselectmenu_id">  
+        <form action="" method="post" class="form-usermenu-box" id="form-usermenu_id">
+            <h2>User Menu</h2>   
+            <select class="usermenu-select" id="userselect_id">
+                <option value="editprofile">Edit Profile</option>
+                <option value="settinguser">User Settings</option>
+                <option value="addcontactman">Add Contact Man</option>
+                <option value="editcontactman">Edit Contact Man</option>
+                <option value="deletacontactman">Delete Contact Man</option>
+                <option value="deletAccount">Delete Account</option>
+            </select>
+            <button class="chooseselect-btn" id="chooseselect" type="submit">Submit</button>
+        </form>
+    </div>
+    <div class="informationselectmenu" id="informationselectmenu-select_id">  
+      <form action="" method="post" class="form-informationselectmenu-box" id="form-informationselectmenu_id">
+          <h2>Information Menu</h2>   
+              <select class="information-select" id="informationmenu-select_id">
+                  <option value="showalldonationcollect">Show all donations collected</option>
+                  <option value="showallcontactman">Show all contact men</option>
+                  <option value="showallorganiztion">Show all organization</option>
+              </select>
+              <button class="chooseinformationmenu-btn" id="chooseinformationmenu_id" type="submit">Submit</button>
+          </form>
+      </div>
+    <div class="searchdonation" id="searchdonation_id">
+        <form action="" method="get" class="form-search-box" id="form-search">
+            <h2>Donation Search</h2>
+            <p id="location">Location</p>
+            <input type="text" id="inputCity" placeholder="Enter Location to search" name="locationsearch" required>
+            <button class="searchdonation-btn" id="searchdonation" type="submit">Search</button>
+            <button class="resetdonation-btn" id="resetdonation" type="submit">Reset</button>
+            <select class="searchdonation-select" id="searchdonation-select_id">
+            </select>
+          </form>
+    </div>
+    <div class="deleteaccountmodal" id="deleteusermodal_id">
+        <form action="" class="form-deleteuser-modal" id="form-deleteuser">
+            <p>The account will be permanently deleted</p>
+            <p>Are you sure?</p>
+            <button class="delete-btn-yes" id="delete-yes" type="submit">Yes</button>
+            <button class="delete-btn-no" id="delete-no" type="submit">No</button>
+        </form>
+    </div>
+    <div class="changesettingsusermodal" id="changesettingsusermodal_id">
+        <form action="" class="form-changesettingsuser-modal" id="form-changesettingsuser">
+          <p>Change user settings</p>
+          <br>
+          <label>
+            <input type="checkbox" id="email-notifications" name="email-notifications">
+            I agree to receive email notifications.
+          </label>
+          <br>
+          <label>
+            <input type="checkbox" id="phone-notifications" name="phone-notifications">
+            I agree to receive phone notifications.
+          </label>
+          <br>
+          <label>
+            <input type="checkbox" id="no-notifications" name="no-notifications">
+            I do not agree to receive notifications.
+          </label>
+          <br><br>
+          <button class="save-btn-yes" id="save-yes" type="submit">Save</button>
+          <button class="exit-btn-no" id="exit-no" type="submit">Exit</button>
+        </form>
+      </div> 
+        <br>
+        <div class="resultmodal" id="resultmodal_id">
+            <form action="" method="get" class="form-result-modal" id="form-result_id">
+            <br><br>
+            <h2>Table Result</h2>
+            <br>
+                <button class="showitems-btn" id="showitems_id" type="submit">Show Items</button>
+                <button class="showcontactman-btn" id="showcontactman_id" type="submit">Show Contact Man</button>
+                <button class="chooseDonation-btn" id="chooseDonation_id" type="submit">Choose Donation</button>
+                <button class="cancelchooseDonation-btn" id="cancelchooseDonation_id" type="submit">Cancel Choose Donation</button>
+                <button class="refreshdonationtable-btn" id="refreshdonationtable_id" type="submit">Refresh</button>
+                <hr>
+                <div class="table-container">
+                    <table class="tableDonation_show" id="tableDonationshow_id">
+                        <thead>
+                            <tr>
+                                <th>Select</th>
+                                <th>Number</th>
+                                <th>Name</th>
+                                <th>Loction</th>
+                                <th>Date</th>
+                                <th>Association</th>
+                                <th>Phone</th>
+                                <th>Status</th>
+                                <th>Number of items</th>
+                                <th>Time Life</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tableDonationshow_body"></tbody>
+                    </table>
+                </div>
+            </form>
+        </div>
+        <div class="showcollectedmodal" id="showcollectedmodal_id">
+          <form action="" class="form-showcollected-modal" id="form-showcollectedmodal_id">
+              <h2>All Collected Donation</h2>
+                <button class="exite-btn" id="exite-btn-1_id" type="submit">Exit</button>
+                <hr>
+                <div class="table-container2">
+                    <table class="table_show" id="tableshowcollected_id">
+                        <thead>
+                            <tr>
+                                <th>Number</th>
+                                <th>Date create</th>
+                                <th>Date delete</th>
+                                <th>Loction</th>
+                                <th>Association</th>
+                                <th>Number of items</th>
+                                <th>Reason of deletion</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tablecollectedshow_body"></tbody>
+                    </table>
+                </div>
+            </form>
+        </div>
+        <div class="showallcontactmanmodal" id="showallcontactmanmodal_id">
+          <form action="" class="form-showallcontactman-modal" id="form-showallcontactman_id">
+            <h2>Contact man</h2>
+              <button class="exite-btn" id="exite-btn-2_id" type="submit">Exit</button>
+              <hr>
+              <div class="table-container2">
+                  <table class="table_show" id="tablecontactman_id">
+                      <thead>
+                          <tr>
+                              <th>Number</th>
+                              <th>Name</th>
+                              <th>Phone</th>
+                              <th>Role</th>
+                          </tr>
+                      </thead>
+                      <tbody id="tablecontactmanshow_body"></tbody>
+                  </table>
+              </div>
+          </form>
+      </div>
+      <div class="showdetailorganizationmodal" id="showdetailsorganizationmodal_id">
+        <form action="" class="form-showdetailsorganization-modal" id="form-showdetailsorganization_id">
+          <h2>Table of organization</h2>
+            <button class="showallcontactman-btn" id="showcontactmanorg-btn_id" type="submit">Show contact man</button>
+            <button class="exite-btn" id="exite-btn-3_id" type="submit">Exit</button>
+            <hr>
+            <div class="table-container2">
+                <table class="table_show" id="tableallassociation_id">
+                    <thead>
+                        <tr>
+                            <th>Select</th>
+                            <th>Number</th>
+                            <th>Name of association</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>Address</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableorganozationshow_body"></tbody>
+                </table>
+            </div>
+        </form>
+      </div>
+      <div class="showcontactmanorganizationmodal" id="showcontactmanorganiztionmodal_id">
+        <form action="GET" class="form-showcontactmanassociation-modal" id="form-showcontactmanassociation_id">
+          <h2>Contact man of  <span id="organizationname_id"></span></h2>
+          <button class="exite-btn" id="exite-btn-4_id" type="submit">Exit</button>
+          <hr>
+          <div class="table-container2">
+            <table class="table_show" id="tableallorganizationcontactman_id">
+              <thead>
+                <tr>
+                  <th>number</th>
+                  <th>Name</th>
+                  <th>Phone</th>
+                  <th>Role</th>
+                </tr>
+              </thead>
+              <tbody id="tableorganizationcontactmanshow_body"></tbody>
+            </table>
+          </div>
+        </form>
+      </div>
+    <script src="homePageAssociation.js"></script>
+    <script>
+        // Call the display functions when the page loads
+        window.addEventListener('load', displayUser);
+        window.addEventListener('load', displayAllCity);
+    </script>
+</body>
+</html>

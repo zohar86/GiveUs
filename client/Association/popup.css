@@ -1,0 +1,102 @@
+/* CSS for the popup window */
+
+body::before {
+  content: "";
+  position: fixed; /* Change to fixed position to cover the entire viewport */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* Update to 100% to cover the entire page */
+  background-image: url("../Images/giveuslogo.jpg");
+  background-size: 100; /* Use 'cover' to scale and cover the entire background */
+  background-position: center top;
+  mix-blend-mode: multiply;
+  opacity: 0.1;
+}
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    font-weight: bolder;
+  }
+  
+  .popup-window h3 {
+    margin-top: 0;
+    color: white ;
+    color: black;
+  }
+  
+  .popup-window p {
+    margin: 0;
+    padding: 5px 0;
+    margin-top: 10px;
+    color: black;
+  }
+  
+  .popup-window hr {
+    border: 0;
+    border-top: 5px solid black ;
+    margin: 10px 0;
+    margin-top: auto;
+  }
+  .remove-btn{
+    background-color: red;
+    font-size: 16px;
+    border-radius: 10px;
+    width: 80px;
+    height: 30px;
+    font-weight: bold;
+  }
+  .remove-btn:hover, .update-btn:hover{
+    border-color: white;
+  } 
+  .update-btn{
+    background-color: blue;
+    font-size: 16px;
+    border-radius: 10px;
+    width: 80px;
+    height: 30px;
+    font-weight: bold;
+  } 
+  .pagerefresh-btn{
+    background-color: green;
+    font-size: 15px;
+    border-radius: 10px;
+    width: 70px;
+    height: 30px;
+    font-weight: bold;
+  }
+  .updatequantity-btn{
+    background-color: green;
+    font-size: 16px;
+    border-radius: 15px;
+    width: 70px;
+    height: 40px;
+    font-weight: bold;
+  }
+  .form-update-popup input[type="number"]{
+    border-radius: 10px;
+    font-size: 24px;
+    width: 100px;
+    height: auto;
+    font-weight: bolder;
+  }
+  .form-update-popup p{
+    font-size: 20px;
+    font-weight: bold;
+  }
+  p{
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  @keyframes blink {
+    0% {
+      border-color: transparent;
+    }
+    50% {
+      border-color: white;
+    }
+    100% {
+      border-color: transparent;
+    }
+  }

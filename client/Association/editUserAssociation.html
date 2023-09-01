@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Personal Association</Details></title>
+    <link rel="stylesheet" href="editUserAssociation.css">
+</head>
+<body>
+      <!-- class named "container" is assigned to div -->
+      <div class="edituser" id="edituser_id">
+        <form action="" method="post" class="form-edit-box" id="form-edit_id">
+          <h2>Edit Details- Association</h2>
+          <label for="email"><b>Email</b></label>
+          <input
+            type="text"
+            placeholder="Enter A New Email"
+            name="email"
+            id="email_id"
+          />
+          <label for="email-repeat"><b></b></label>
+          <input
+            type="text"
+            placeholder="Enter A New Email Again"
+            name="email-repeat"
+            id="email-repeat_id"
+          />
+          <br><br>
+          <label for="phoneNumber"><b>Phone Number</b></label>
+          <input
+            type="text"
+            placeholder="Enter A New Phone Number"
+            name="phoneNumber"
+            id="phonenumber_id"
+          />
+          <label for="phoneNumber-repeat"><b></b></label>
+          <input
+            type="text"
+            placeholder="Enter A New Phone Number Again"
+            name="phoneNumber-repeat"
+            id="phonenumber-repeat_id"
+          />
+          <br><br>
+          <label for="address"><b>Address</b></label>
+          <input
+            type="text"
+            placeholder="Enter A New Address"
+            name="address"
+            id="address_id"
+          />
+          <br><br>
+          <label for="city"><b>City</b></label>
+          <input
+            type="text"
+            placeholder="Enter A New City"
+            name="city"
+            id="city_id"
+          />
+          <br><br>
+          <label for="pwd"><b>Password</b></label>
+          <div class="password-input">
+            <input 
+              type="password"
+              placeholder="Enter Password"
+              name="pwd"
+              id="pwd_id"
+            />
+            <img src="../Images/eye-close.png" alt="Show Password" id="toggleButton" class="toggle-password">
+            </div>
+          <div class="repeat-password-input">
+          <input
+            type="password"
+            placeholder="Repeat Password"
+            name="pwd-repeat"
+            id="pwd-repeat_id"
+           />
+           <img src="../Images/eye-close.png" alt="Show Password" id="toggleButtonRepeat" class="toggle-password">
+          </div>
+          <div class="change-button">
+            <br><br>
+            <button class="submitchange-btn" id="submitchange" type="submit">Change</button>
+            <button class="returnhomepage-btn" id="returnhomepage" type="submit">Back</button>
+          </div>
+        </form>
+        </div>
+      </div>
+        <div class="confirmodal" id="confirmodal_id">
+          <form action="" class="form-confirm-modal" id="form-confirmodal_id">
+            <p>Your details will be approved</p>
+              <p>Are you sure?</p>
+              <button class="confirm-btn-yes" id="confirmodal-yes" type="submit">Yes</button>
+              <button class="confirm-btn-no" id="confirmodal-no" type="submit">No</button>
+          </form>
+        </div>
+          <div class="returnmodal" id="returnmodal_id">
+            <form action="" class="form-return-modal" id="form-return_id">
+                <p>Your details have been updated!</p>
+                <p>Click OK to return to the home page</p>
+                <button class="return-btn-yes" id="return-yes" type="submit">OK</button>
+            </form>
+          </div>
+      <script src="editUserAssociation.js"></script>
+  </body>
+</html>
